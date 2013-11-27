@@ -29,6 +29,8 @@ div#intro {
 
 div#press-image {
   float:left;
+  position:relative;
+  top:-10px;
   margin-top:0;
   padding-top:0;
   width:255px;
