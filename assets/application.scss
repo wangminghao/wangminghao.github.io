@@ -1,0 +1,336 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+/******* @media *********/
+@media only screen and (max-width: 767px) {
+  .patch-title-mobile {
+    margin: 5px 0 0 150px;
+  }
+  .patch-title {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .patch-title-mobile {
+    display: none;
+  }
+
+  .patch-title {
+    margin-top: 30px;
+  }
+}
+
+@media only screen and (max-width: 864px) {
+  .timeline-content {
+    margin-left: 60px;
+    width: 175px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .timeline-content {
+    margin: 20px 0 0 60px;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .timeline-content {
+    margin-left: 5px;
+  }
+}
+/**************/
+
+@import "bootstrap";
+
+
+.skull-background {
+  background-color: #1f1b17;
+  color: #e0dedc;
+}
+
+.skull.neutral {
+  display: none;
+}
+
+.skull-highlight {
+  display: none;
+}
+
+.skull-highlight-active {
+  display: inline;
+}
+
+.patch-body {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.about-donate-links {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.about-link {
+  margin-left: 15px;
+  margin-right: 30px;
+}
+
+.about-link a:link, a:visited {
+  color: #e0dedc;
+}
+
+.btn-outline-donate {
+  color: #FFF067;
+  border-color: #FFF067;
+}
+
+.btn-outline-donate:hover {
+  text-decoration: underline;
+  color: #FFF067;
+}
+
+.timeline-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.timeline-dots {
+  position: absolute;
+  height:1000px;
+  width:90px;
+  top: 0;
+  bottom: 0;
+}
+
+.timeline-dots::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 88px;
+  border-left: 3px dotted #fff067;
+  transform: translate(-50%);
+}
+
+.timeline-container .timeline-label {
+  position: absolute;
+  color: #fff067;
+  top: 65px;
+  left: 53px;
+  transform: rotate(90deg);
+  font-size: 0.85em;
+}
+
+.timeline-container .unselected {
+  display: none;
+}
+
+.timeline-dates {
+  width: 50px;
+  font-size: 1.2em;
+  align-items: left;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.timeline-dates a.date-entry {
+  margin: 30px 0 30px 0;
+  color: #fff067;
+}
+
+.timeline-dates a.bullet-active {
+  position: relative;
+  color: #e0dedc;
+}
+
+.timeline-dates .bullet-active::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  left: 45px;
+  width: 9px;
+  height: 9px;
+  border-radius: 100%;
+  background-color: #e0dedc;
+  transform: scale(1);
+  transition: 0.2s;
+}
+
+.timeline-content {
+  width: 250px;
+  display: none;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.timeline-container .content-active {
+  display: flex;
+}
+
+.timeline-content .date-title {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+.timeline-content .date-content {
+  font-size: .9em;
+}
+
+.timeline-content .date-content .content-listing {
+  margin-top: 5px;
+  border-top: 1px solid;
+
+  a:link, a:visited {
+    color: #e0dedc;
+  }
+}
+
+.return-home {
+  font-style: italic;
+  font-weight: 650;
+  color: #e0dedc;
+}
+
+.credits {
+  font-weight: 550;
+  font-size: 1.1em;
+  margin-bottom: 15px;
+}
+
+.video-description {
+  padding-top: 20px;
+  font-size:0.85em;
+  font-style: normal;
+}
+
+.next-video {
+  position: float;
+  margin: 30px 0 15px 0;
+}
+
+.release-date {
+  font-size: 1.1em;
+  font-weight: 700;
+  font-style: italic;
+  margin-top: 15px;
+}
+
+span.title {
+  font-style: italic;
+  color: #F8DA7C;
+}
+
+.blurry {
+  filter: blur(8px);
+  -webkit-filter: blur(8px);
+}
+
+.section-title {
+  font-size: 1.3em;
+  font-weight: bold;
+}
+
+span.collaborator {
+  font-weight: bold;
+
+  a:link,a:visited {
+    color: #e0dedc;
+  }
+}
+
+/** ABOUT page **/
+.patch-title-text {
+  font-size: 1.1em;
+  color: #fff067;
+  font-style: italic;
+}
+
+.logo-by-height {
+  height: 80px;
+  margin: 10px;
+}
+
+.logo-by-width {
+  width: 200px;
+  margin: 10px;
+}
+
+/** WRITING **/
+.writing .card {
+  color: #1f1b17;
+  background-color: #e0dedc;
+}
+
+.writing .card-title {
+  margin: 10px 10px 0 10px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.writing sup {
+  font-weight: bold;
+  color: #7F3FBF;
+}
+
+.writing #footnotes,.footnotes {
+  font-size: 0.8em;
+}
+
+.archive li {
+  color: blue;
+}
+
+.saari-intro {
+  font-size: 0.95em;
+}
+
+/* Journal entries */
+.journal-entries {
+  font-family: Calibri, Arial, sans-serif;
+}
+
+.journal-entries a:link, a:visited {
+  color: #007bff;
+}
+
+/* Colors used in the main
+.red {
+  color: #f83f31;
+}
+
+.green {
+  color: #9BF756;
+}
+
+.white {
+  color: #e0dedc;
+}
+
+.yellow {
+  color: #FFF067;
+}
+
+.blue {
+  color: #30aef4;
+}
+*/
